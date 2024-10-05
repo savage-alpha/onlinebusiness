@@ -9,25 +9,40 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-image: url('https://source.unsplash.com/random/1920x1080'); /* Change to your desired background image */
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
         }
         .container {
             width: 100%;
             max-width: 600px;
-            margin: 0 auto;
-            background-color: #ffffff;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         h1 {
             color: #2C3E50;
             text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
         p {
             color: #555555;
             font-size: 16px;
             line-height: 1.6;
+            animation: slideIn 0.5s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
         a.button {
             display: inline-block;
@@ -39,9 +54,11 @@
             margin-top: 20px;
             font-size: 18px;
             text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
         a.button:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
         }
         .footer {
             margin-top: 20px;
@@ -55,6 +72,7 @@
             border-radius: 5px;
             font-weight: bold;
             text-align: center;
+            color: #000; /* Change text color to dark for better readability */
         }
     </style>
 </head>
